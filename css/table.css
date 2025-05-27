@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Tagesschrift&display=swap')
+
+body{
+    font-family: "poppins", sansse
+}
+h1{
+    text-align: center;
+    color: #2c3e2c;
+    margin-bottom: 20px;
+}
+table{
+    width: 80%;
+    margin: 0 auto 40px auto;
+    border: 0 auto 40px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0,1);
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th, td{
+    padding: 12px 20px ;
+    text-align: center;
+}
+th{
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+}
+tr:nth-child(even){
+    background-color: #2c3e2c;
+}
+tr:hover{
+    background-color: #dff9fb;
+}
+button{
+    padding: 6px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+button:hover{
+    opacity: 0.8;
+}
+button:first-child{
+    background-color: #27ea60;
+    color: #fff;
+
+}
+button:last-child{
+    background-color: #e74c3c;
+    color: #fff;
+}
+.profile-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    
+}
+tr td:first-child{
+    font-weight: bold;
+
+}

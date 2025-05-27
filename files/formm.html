@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admission Form - ASMT</title>
+  <link rel="stylesheet" href="../css/form.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="form-container">
+    <button class="close-btn"><i class="fas fa-times"></i></button>
+    <h2>Admission Form</h2>
+    <p class="subtitle">Asian School of Management and Technology</p>
+    
+    <form>
+      <div class="input-group">
+        <label><i class="fas fa-user"></i> Full Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="input-group">
+        <label><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input-group">
+        <label><i class="fas fa-calendar-alt"></i> Date of Birth</label>
+        <input type="date" required>
+      </div>
+
+      <div class="input-group">
+        <label><i class="fas fa-book-open"></i> Choose Faculty</label>
+        <select required>
+          <option value="" disabled selected>-- Select Faculty --</option>
+          <option value="bca">BCA</option>
+          <option value="bim">BIM</option>
+          <option value="csit">BSc CSIT</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>

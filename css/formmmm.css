@@ -1,0 +1,191 @@
+:root {
+  --bg: rgba(255, 255, 255, 0.1);
+  --blur: 10px;
+  --text: #111;
+  --card: rgba(255, 255, 255, 0.2);
+  --input-bg: rgba(255, 255, 255, 0.25);
+  --accent: #6200ee;
+}
+
+#darkToggle:checked ~ .container,
+#darkToggle:checked ~ .thank-you {
+  --bg: rgba(0, 0, 0, 0.3);
+  --text: #fff;
+  --card: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url('../images/bca.png') center/cover no-repeat fixed;
+  backdrop-filter: blur(6px);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--input-bg);
+  padding: 0.5rem 0.7rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text);
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.container {
+  background: var(--card);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+  backdrop-filter: blur(var(--blur));
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 1s ease;
+}
+
+form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.school-name {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 1.2rem;
+}
+
+.input-box {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.input-box i {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+  background: var(--input-bg);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-box label {
+  position: absolute;
+  top: 14px;
+  left: 2.5rem;
+  pointer-events: none;
+  transition: 0.2s ease;
+  opacity: 0.6;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: var(--card);
+  padding: 0 0.3rem;
+}
+
+.upload-box {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.upload-label {
+  display: inline-block;
+  color: var(--text);
+  background: var(--input-bg);
+  padding: 0.6rem 1rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.upload-label:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* Thank You Popup */
+.thank-you {
+  display: none;
+  background: var(--card);
+  backdrop-filter: blur(var(--blur));
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.8s ease;
+}
+
+#thanks:target {
+  display: block;
+}
+
+.thank-you a {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
